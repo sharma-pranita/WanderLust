@@ -1,28 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wanderlust</title>
-</head>
+<% layout("/layouts/boilerplate")%>
 <body>
-    <h3>Craete a new listing</h3>
+  <div class=" create d-flex justify-content-center align-items-center vh-100 mb-4">
+    <div class="col-12 col-md-8 col-lg-6"  style="margin-top: -60px;">
+      <h3 class="heading text-center">Create a new listing</h3>
+      <div class="create p-4">
+        <form class="create-form" action="/listings" method="POST">
+          <div class="create-box mb-2">
+            <label for="title" class="form-label">Title</label>
+            <input
+              type="text"
+              name="listing[title]"
+              placeholder="Enter title"
+              class="create-box form-control"
+            />
+          </div>
 
-<form action="/listings" method="POST">
-<input type="text" name="listing[title]" placeholder="enter title">
-<br>
-<input type="text" name="listing[description]" placeholder="enter description">
-<br>
-<input type="text" name="listing[image]" placeholder="enter image URL/Link">
-<br>
-<input type="number" name="listing[price]" placeholder="enter price">
-<br>
-<input type="text" name="listing[country]" placeholder="enter country">
-<br>
-<input type="text" name="listing[location]" placeholder="enter location">
-<br>
-<button>Add</button>
-</form>
+          <div class="create-box mb-2">
+            <label for="description" class="form-label">Description</label>
+            <input
+              type="text"
+              name="listing[description]"
+              placeholder="Enter description"
+              class="create-box form-control"
+            />
+          </div>
 
+          <div class="create-box mb-2">
+            <label for="image" class="form-label">Image</label>
+            <input
+              type="text"
+              name="listing[image]"
+              placeholder="Enter image URL/Link"
+              class="create-box form-control"
+            />
+          </div>
+
+          <div class="row">
+            <div class="create-box mb-2 col-12 col-md-6">
+              <label for="price" class="form-label">Price</label>
+              <input
+                type="number"
+                name="listing[price]"
+                placeholder="Enter price"
+                class="create-box form-control"
+              />
+            </div>
+
+            <div class="create-box mb-2 col-12 col-md-6">
+              <label for="country" class="form-label">Country</label>
+              <input
+                type="text"
+                name="listing[country]"
+                placeholder="Enter country"
+                class="create-box form-control"
+              />
+            </div>
+          </div>
+
+          <div class="create-box mb-2">
+            <label for="location" class="form-label">Location</label>
+            <input
+              type="text"
+              name="listing[location]"
+              placeholder="Enter location"
+              class="create-box form-control"
+            />
+          </div>
+
+          <br />
+          <div class="text-center">
+            <button class="btn btn-dark add-btn">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
