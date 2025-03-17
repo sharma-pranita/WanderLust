@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Markazi Text", serif !important;
+  font-size: 1.1rem !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container{
+  flex:1;
+}
 
 /* Navbar */
 .navbar {
@@ -15,40 +25,114 @@
   font-size: 2rem;
 }
 .nav-link {
-    color: black !important;
+  color: black !important;
 }
-
 
 /* Footer */
 
-.f-info-links a{
-    text-decoration: none;
-    color: #222222;
-    margin: 0.5rem;
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+  margin: 0.5rem;
 }
 
-.f-info-links a:hover{
-    text-decoration: underline;
+.f-info-links a:hover {
+  text-decoration: underline;
 }
-.f-info{
-    text-align: center;
-    height: 8rem;
-    display: flex;
-    background-color: #ebebeb;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-evenly;
-    padding: 2rem 0rem 2rem;
+.f-info {
+  text-align: center;
+  height: 8rem;
+  display: flex;
+  background-color: #ebebeb;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  padding: 2rem 0rem 2rem;
 }
-.f-info-links,.f-info-socials,.f-info-brand{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    
+.f-info-links,
+.f-info-socials {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
-.f-info-socials i{
-    margin-right: 1rem;
-    font-size: 1.4rem;
+.f-info-socials i {
+  margin-right: 1rem;
+  font-size: 1.4rem;
 }
 
+/* Cards */
+
+.card {
+  border: none !important;
+  margin-bottom: 3rem;
+}
+.card a{
+  text-decoration: none !important;
+  color: #222222;
+}
+ 
+.card-img-top {
+  border-radius: 1rem;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+
+.card-body {
+  padding: 0 !important;
+ 
+}
+.card-text  {
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.card-img-overlay{
+  position: relative;
+
+}
+
+.card-img-overlay i {
+  position: absolute;
+    top: 5px;
+    right: 20px;
+
+}
+
+/* Create */
+
+.create{
+  border: 0.5px solid rgb(0, 0, 0,0.5);
+  border-radius: 2rem;
+}
+.add-btn{
+  background-color: #fe424d !important;
+  border: none !important;
+  width: 10vw;
+  cursor: pointer; /* Pointer cursor on hover */
+  
+}
+
+
+.create{
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(15px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  padding: 2rem; /* Padding inside the container */
+  color: black; /* Text color */
+
+}
+.create-box{
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  color: black; /* Text color */
+  
+  outline: none; /* Remove default outline */
+}
+.create-box::placeholder{
+  color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
+}
